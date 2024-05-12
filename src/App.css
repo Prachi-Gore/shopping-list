@@ -1,3 +1,36 @@
-body{
-    background-color: blue;
+/* font family */
+@import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
+body {
+    font-family:  monospace !important; 
+    /* 'Oswald', */
+  }
+/* header */
+.text-indigo-800{
+    color: #6610f2 ;
+}
+/* inputItem */
+.input-item{
+    min-width:40% ;
+    border: none;
+    border-bottom: 1px solid black;
+}
+ .input-item:focus{
+    outline: none; 
+    /* border-bottom: #6610f2; */
+    /* border-color: black !important; */
+    
+     /* padding: 100px; */
+} 
+/* add-item-btn */
+.add-item-btn{
+    background-color:#6610f2 ;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.text-xl{
+    font-size: 20px;
+}
+.custom-border-bottom {
+    border-bottom: dashed 1.5px #6610f2;
 }
