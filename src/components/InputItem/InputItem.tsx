@@ -2,20 +2,22 @@ import { ToastContainer } from 'react-toastify';
 import '../../App.css'
 import 'react-toastify/dist/ReactToastify.css';
 import { showSuccess } from '../utils/showToast';
-import { Dispatch, SetStateAction, useState } from 'react';
-import { shoppingItemsType } from '../../type';
-import {v4 as uuidv4} from 'uuid';
+import {   Dispatch, useState } from 'react';
+import { Action } from '../../type';
 
-
-
-export default function InputItem({shoppingItems,setShoppingItems}:{shoppingItems:shoppingItemsType[],setShoppingItems:Dispatch<SetStateAction<shoppingItemsType[]>>}) {
+export default function InputItem({dispatch}:{dispatch:Dispatch<Action>}) {
     const [item,setItem]=useState<string>('');
+   
 function handleAddItem(){
     if(item.length>0){
-    setShoppingItems([...shoppingItems,{id:uuidv4(),name:item,quantity:1}])
+  dispatch({
+      type:'add_item',
+      itemName:item
+    })
     showSuccess('Item Added Successfully')
     setItem('')
     }
+   
 }
   return (
     <div className="d-flex justify-content-center my-4   gx-1 container">

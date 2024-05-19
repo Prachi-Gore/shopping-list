@@ -9,7 +9,7 @@ const Item = ({
   handleRemoveQuantity,
 }: {
   item: shoppingItemsType;
-  handleAddQuantity: (item: shoppingItemsType) => void;
+  handleAddQuantity: (id:string|number) => void;
   handleRemoveQuantity: (item: shoppingItemsType) => void;
 }) => {
   return (
@@ -31,7 +31,7 @@ if(item.quantity==1) showError(`${item?.name} removed from shopping list`)
           role="button"
           src={addition}
           className="mx-1"
-          onClick={() => handleAddQuantity(item)}
+          onClick={() => handleAddQuantity(item.id)}
         />
       </div>
     </div>

@@ -3,3 +3,7 @@ export type shoppingItemsType={
     name:string,
     quantity:number
 }
+
+export type Action={
+    type: 'add_item'; itemName: string;
+}|{  type: 'add_quantity'|'remove_quantity'; itemId: number | string }
