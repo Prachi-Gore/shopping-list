@@ -34,3 +34,22 @@ body {
 .custom-border-bottom {
     border-bottom: dashed 1.5px #6610f2;
 }
+/* footer scrolling */
+@keyframes marquee{
+    0%{
+        transform: translateX(100%);
+    }
+    /* 50%{transform: translateX(50%);} */
+    100%{transform: translateX(-100%);
+    }
+}
+.moving-text{
+    animation: marquee 15s linear  infinite;
+    /* animation-delay: 0s; */
+}
+.moving-text p{
+    background-color: rgb(102, 37, 37);
+ }
+.moving-text:hover{
+    animation-play-state: paused;
+}

@@ -4,6 +4,7 @@ import InputItem from "../InputItem/InputItem";
 import ItemList from "../ItemList/ItemList";
 import { itemReducer } from "../../reducer/itemReducer";
 import { ShoppingItemsContext,ShoppingDispatchContext } from "../../providers/ShoppingContext";
+import Footer from "../Footer/footer";
 
 const ShoppingList = () => {
   const[shoppingItems,dispatch]=useReducer(itemReducer,[])
@@ -20,6 +21,7 @@ const ShoppingList = () => {
       />
       <ItemList
       />
+      <Footer />
     </div>
     </ShoppingDispatchContext.Provider>
     </ShoppingItemsContext.Provider>
