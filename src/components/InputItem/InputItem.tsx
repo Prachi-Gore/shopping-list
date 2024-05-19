@@ -2,31 +2,52 @@ import { ToastContainer } from 'react-toastify';
 import '../../App.css'
 import 'react-toastify/dist/ReactToastify.css';
 import { showSuccess } from '../utils/showToast';
-import {   Dispatch, useState } from 'react';
-import { Action } from '../../type';
+import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
+import { ShoppingDispatchContext } from '../../providers/ShoppingContext';
 
-export default function InputItem({dispatch}:{dispatch:Dispatch<Action>}) {
-    const [item,setItem]=useState<string>('');
+
+type inputItem={
+  item:string
+}
+export default function InputItem() {
+    const {dispatch}=useContext(ShoppingDispatchContext);
+    const { register, handleSubmit , formState: { errors },reset} = useForm<inputItem>()
    
-function handleAddItem(){
-    if(item.length>0){
+function handleAddItem(item:string){
   dispatch({
       type:'add_item',
       itemName:item
     })
     showSuccess('Item Added Successfully')
-    setItem('')
-    }
-   
+}
+const handleFormSubmit=(data:{item:string})=>{
+  handleAddItem(data.item);
+  reset();
 }
   return (
-    <div className="d-flex justify-content-center my-4   gx-1 container">
+    <>
+    <form 
+    onSubmit={handleSubmit(handleFormSubmit)}
+    className="d-flex justify-content-center my-4 gx-1 container">
       <input type="text" placeholder="Add an Item..." className="p-2 input-item"
-      value={item}
-      onChange={(e)=>setItem(e.target.value)}
+      {...register("item", { required: true,minLength:2 ,pattern:/^[A-Za-z]+$/})}
+      name='item'
+      aria-invalid={errors.item ? "true" : "false"}
       />
-      <button className="add-item-btn text-white  border-0" type="button" onClick={handleAddItem}>Add</button>
+      <button type="submit" className="add-item-btn text-white  border-0"  >Add</button>
+     
       <ToastContainer />
-    </div>
+    </form>
+     {errors.item?.type === "required" && (
+      <p className='text-danger text-center' role="alert">Please Enter Item</p>
+    )}
+     {errors.item?.type === "minLength" && (
+      <p className='text-danger text-center' role="alert">Item name should contain atleast two characters</p>
+    )}
+     {errors.item?.type === "pattern" && (
+      <p className='text-danger text-center' role="alert">This is not proper item name</p>
+    )}
+    </>
   );
 }
