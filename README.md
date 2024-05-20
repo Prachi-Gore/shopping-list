@@ -31,3 +31,4 @@ export default {
 
 <!-- to run : npm run dev -->
 npm install react-hook-form
+live : https://prachi-shopping-list.netlify.app/

@@ -5,12 +5,12 @@ import ItemList from "../ItemList/ItemList";
 import { itemReducer } from "../../reducer/itemReducer";
 import { ShoppingItemsContext,ShoppingDispatchContext } from "../../providers/ShoppingContext";
 import Footer from "../Footer/footer";
+import Profile from "../Profile/Profile";
 
 const ShoppingList = () => {
   const[shoppingItems,dispatch]=useReducer(itemReducer,[])
   // useReducer take initial state([]) and return updated state(shoppingItems)
   console.log('shoppingItems ',shoppingItems)
- 
  
   return (
     <ShoppingItemsContext.Provider value={{shoppingItems}}>
@@ -22,6 +22,7 @@ const ShoppingList = () => {
       <ItemList
       />
       <Footer />
+      <Profile />
     </div>
     </ShoppingDispatchContext.Provider>
     </ShoppingItemsContext.Provider>

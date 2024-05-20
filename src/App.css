@@ -53,3 +53,31 @@ body {
 .moving-text:hover{
     animation-play-state: paused;
 }
+/* profile social platform links */
+.profile{
+    top:80px;
+    left: 10px;
+    row-gap: 20px;
+    background-color: rgb(240, 97, 218);
+ }
+ .profile img{
+     height: auto;
+     width: auto;
+     border: none; 
+ }
+ .responsive-img {
+    width: 50%;
+ }
+ @media only screen and (min-width: 768px) {
+    .profile {
+        top:30%;
+    }
+    .responsive-img {
+        width: 35%;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .responsive-img {
+        width: 25%;
+    }
+}

@@ -23,7 +23,7 @@ const ItemList = () => {
     }
   }
   return (
-    <div className="container">
+    <div className="mb-5">
       {shoppingItems?.map(item=>{
         return <Item key={item.id} item={item} handleAddQuantity={handleAddQuantity} handleRemoveQuantity={handleRemoveQuantity}/>
       })}
