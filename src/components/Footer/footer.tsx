@@ -1,6 +1,6 @@
 const Footer=()=>{
     const keyPoints=['ContextApi','Bootstrap5','React','typescript','useReducer',
-    'notification','react-toast','useForm','html','animation']
+    'notification','react-toast','useForm','html','animation','regex','form validation']
     return(
         <footer className="fixed-bottom text-white moving-text d-flex gap-4 px-2 py-1.5">
             {
