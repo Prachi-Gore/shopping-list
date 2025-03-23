@@ -31,7 +31,8 @@ const handleFormSubmit=(data:{item:string})=>{
     onSubmit={handleSubmit(handleFormSubmit)}
     className="d-flex justify-content-center my-4 gx-1 container">
       <input type="text" placeholder="Add an Item..." className="p-2 input-item"
-      {...register("item", { required: true,minLength:2 ,pattern:/^[A-Za-z]+$/})}
+      {...register("item", { required: true,minLength:2 ,pattern:/^[A-Za-z]+( [A-Za-z]+)*$/
+})}
       name='item'
       aria-invalid={errors.item ? "true" : "false"}
       />
