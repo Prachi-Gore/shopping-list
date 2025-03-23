@@ -1,4 +1,4 @@
-## Movie Search Website
+## Shopping list
 <p align="center">
  <a href="https://prachi-shopping-list.netlify.app/">
  <img src="./public/ui.png"height='400'width='80%'/>
