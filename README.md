@@ -1,34 +1,25 @@
-# React + TypeScript + Vite
+## Movie Search Website
+<p align="center">
+ <a href="https://prachi-shopping-list.netlify.app/">
+ <img src="./public/ui.png"height='400'width='80%'/>
+ </a>
+ </p>
+<h3>Tech Stack Used</h3>
+ <ul>
+  <li>CSS</li>
+  <li>ReactJS</li>
+  <li>Typescript</li>
+ </ul>
+ 
+<h3><a href="https://prachi-shopping-list.netlify.app/">Visit Now</a></h3>
+<p>Don't forget to ⭐ if you like it</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3>Thank You !</h3>
+<br>
 
-Currently, two official plugins are available:
+    
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 <!-- to run : npm run dev -->
-npm install react-hook-form
-live : https://prachi-shopping-list.netlify.app/
+<!-- npm install react-hook-form -->
