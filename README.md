@@ -9,6 +9,7 @@
   <li>CSS</li>
   <li>ReactJS</li>
   <li>Typescript</li>
+  <li>Context API</li>
  </ul>
  
 <h3><a href="https://prachi-shopping-list.netlify.app/">Visit Now</a></h3>
